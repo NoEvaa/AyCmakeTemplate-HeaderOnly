@@ -3,7 +3,7 @@
 
 int main()
 {
-  std::cout << inn::ayMax(1, 2) << std::endl;
+  std::cout << iin::ayMax(1, 2) << std::endl;
   return 0;
 }
 
