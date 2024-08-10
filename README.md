@@ -17,3 +17,5 @@ sh build.sh Release
 
 ## License
 
+[Unlicense](LICENSE)
+
