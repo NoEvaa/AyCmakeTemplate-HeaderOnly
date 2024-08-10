@@ -1,8 +1,7 @@
 cmake_minimum_required(VERSION 3.15)
 
-# 
+# ==================================================
 # Project
-# 
 
 project(
   AyHeader
@@ -14,6 +13,8 @@ project(
 set(MODULE_NAME ayheader)
 set(MODULE_NS ayin)
 
+# ==================================================
+
 # Project options
 include(cmake/Options.cmake)
 # Utils 
@@ -24,20 +25,19 @@ include(cmake/Init.cmake)
 # Third party
 #add_subdirectory(third_party)
 
+# ==================================================
 # Module library
+
 add_library(${MODULE_NAME} INTERFACE)
+target_include_directories(${MODULE_NAME} INTERFACE include)
+
 add_library(${MODULE_NS}::${MODULE_NAME} ALIAS ${MODULE_NAME})
 message(STATUS "Build library `${MODULE_NS}::${MODULE_NAME}`")
 
-target_include_directories(${MODULE_NAME} INTERFACE include)
-
+# ==================================================
 # Project development environment 
+
 if(${PROJECT_NAME}_IS_MAIN)
   # Main
   add_subdirectory(main)
-
-  # Tests
-  #if(${PROJECT_NAME}_ENABLE_TESTS)
-  #  add_subdirectory(tests)
-  #endif()
 endif()
