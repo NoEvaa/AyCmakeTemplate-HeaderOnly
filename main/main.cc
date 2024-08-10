@@ -1,4 +1,4 @@
-#include "ayheader/ay_proj.hpp"
+#include "ayheader/ay_max.hpp"
 #include <iostream>
 
 int main()

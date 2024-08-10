@@ -11,7 +11,7 @@ project(
 )
 
 # Module: namespace::name
-set(MODULE_NAME ayproj)
+set(MODULE_NAME ayheader)
 set(MODULE_NS ayin)
 
 # Project options
