@@ -22,18 +22,22 @@ include(cmake/Utils.cmake)
 include(cmake/Init.cmake)
 
 # Third party
-add_subdirectory(third_party)
+#add_subdirectory(third_party)
 
 # Module library
 add_library(${MODULE_NAME} INTERFACE)
 add_library(${MODULE_NS}::${MODULE_NAME} ALIAS ${MODULE_NAME})
+message(STATUS "Build library `${MODULE_NS}::${MODULE_NAME}`")
 
 target_include_directories(${MODULE_NAME} INTERFACE include)
 
+# Project development environment 
 if(${PROJECT_NAME}_IS_MAIN)
   # Main
   add_subdirectory(main)
 
   # Tests
-  add_subdirectory(tests)
+  #if(${PROJECT_NAME}_ENABLE_TESTS)
+  #  add_subdirectory(tests)
+  #endif()
 endif()
