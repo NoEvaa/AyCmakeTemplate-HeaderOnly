@@ -13,7 +13,9 @@ sh build.sh Release
 
 ## Contributing
 
-@NoEvaa
+## Authors
+
+- [@NoEvaa](https://github.com/NoEvaa)
 
 ## License
 
