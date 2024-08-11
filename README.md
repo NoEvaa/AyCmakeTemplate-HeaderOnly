@@ -2,6 +2,8 @@
 
 A cmake template for C++ header-only library.
 
+See [AyCmakeTemplate](https://gitee.com/ayin-tech/ay-cmake-template) for more.
+
 ## Quick Start
 
 ### Building
